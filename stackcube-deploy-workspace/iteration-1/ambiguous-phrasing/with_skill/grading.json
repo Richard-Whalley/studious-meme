@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Ambiguous prompt triggers both Phase 1 and Phase 2",
+      "passed": true,
+      "evidence": "Output includes both adapted docker-compose.yml/.env (Phase 1) and phase2_plan.md (Phase 2)"
+    },
+    {
+      "text": "Compose file has container_name on every service",
+      "passed": true,
+      "evidence": "docker-compose.yml has 'container_name: studious-meme-web'"
+    },
+    {
+      "text": "Compose file uses expose instead of ports",
+      "passed": true,
+      "evidence": "docker-compose.yml uses 'expose: - \"${APP_PORT}\"' with no ports directive"
+    },
+    {
+      "text": ".env file exists with APP_PORT=8080",
+      "passed": true,
+      "evidence": ".env contains 'APP_PORT=8080'"
+    },
+    {
+      "text": "Phase 2 steps are initiated/documented",
+      "passed": true,
+      "evidence": "phase2_plan.md covers all 8 steps from init check through deploy report"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,20 @@
+NOTE: stackcube lint could not be executed due to sandbox restrictions preventing
+access to the stackcube binary at ~/.local/bin/stackcube. The sandbox environment
+blocks all access to the ~/.local/ directory.
+
+Based on manual review against the stackcube lint rules (from cli-reference.md):
+
+ERRORS (block deploy): None
+  - container_name is set on all services: PASS
+  - Services are defined: PASS
+
+WARNINGS (informational): None
+  - .env exists with APP_PORT=8080: PASS
+  - Uses expose instead of ports: PASS
+  - restart policy is set: PASS
+
+Expected result: PASS (exit code 0)
+
+To verify, run manually:
+  cd /Users/rickwhalley/Code/stackcube/studious-meme/stackcube-deploy-workspace/iteration-1/prepare-existing-repo/with_skill/outputs
+  stackcube lint

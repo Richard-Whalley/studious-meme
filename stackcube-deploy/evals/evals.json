@@ -1,0 +1,23 @@
+{
+  "skill_name": "stackcube-deploy",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "prepare this for stackcube",
+      "expected_output": "Adapts existing docker-compose.yml and creates .env with APP_PORT=8080, passes stackcube lint",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "deploy this app with stackcube",
+      "expected_output": "Runs Phase 1 (adapt files, lint) then starts Phase 2 (checks init, asks for server details)",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need to get this project onto my stackcube server",
+      "expected_output": "Recognises this as a full deploy request, runs Phase 1 then Phase 2",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    container_name: studious-meme-web
+    env_file: .env
+    environment:
+      - APP_PORT=${APP_PORT}
+    expose:
+      - "${APP_PORT}"
+    restart: unless-stopped

@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "Compose file has container_name on every service",
+      "passed": true,
+      "evidence": "docker-compose.yml has 'container_name: studious-meme-web'"
+    },
+    {
+      "text": "Compose file uses expose instead of ports",
+      "passed": true,
+      "evidence": "docker-compose.yml uses 'expose: - \"${APP_PORT}\"' with no ports directive"
+    },
+    {
+      "text": ".env file exists with APP_PORT=8080",
+      "passed": true,
+      "evidence": ".env contains 'APP_PORT=8080'"
+    },
+    {
+      "text": "Phase 2 checks whether stackcube is initialized",
+      "passed": true,
+      "evidence": "phase2_plan.md Step 1: 'Run stackcube list to check if the CLI is configured'"
+    },
+    {
+      "text": "Phase 2 asks user for domain before running create",
+      "passed": true,
+      "evidence": "phase2_plan.md Step 3: 'Ask the user: What domain should this app be available at?'"
+    },
+    {
+      "text": "Phase 2 handles deploy key via gh for GitHub repos",
+      "passed": true,
+      "evidence": "phase2_plan.md Step 2: 'gh repo deploy-key add <key-file> --title stackcube -R Richard-Whalley/reimagined-journey'"
+    },
+    {
+      "text": "Phase 2 checks for existing app before create",
+      "passed": true,
+      "evidence": "phase2_plan.md Step 4: 'Check if an app named studious-meme already exists. If it does, skip to Step 6'"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

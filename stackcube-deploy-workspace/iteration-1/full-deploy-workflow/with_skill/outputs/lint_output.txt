@@ -1,0 +1,15 @@
+NOTE: stackcube lint could not be executed in the sandbox environment.
+The stackcube CLI binary was found at /Users/rickwhalley/.local/bin/stackcube
+but the sandbox denied permission to run it.
+
+Based on manual verification against the CLI reference (references/cli-reference.md),
+the adapted files should pass lint with exit code 0:
+
+Checks performed (manual):
+  [PASS] container_name set on all services: studious-meme-web
+  [PASS] Services defined: web
+  [PASS] .env file exists with APP_PORT=8080
+  [PASS] Uses expose (not ports) with ${APP_PORT}
+  [PASS] restart policy set: unless-stopped
+
+Expected lint result: PASS (exit code 0), no errors, no warnings.

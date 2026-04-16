@@ -1,0 +1,6 @@
+{
+  "eval_id": 0,
+  "eval_name": "prepare-existing-repo",
+  "prompt": "prepare this for stackcube",
+  "assertions": []
+}

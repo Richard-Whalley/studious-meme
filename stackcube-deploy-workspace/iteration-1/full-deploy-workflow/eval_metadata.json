@@ -1,0 +1,6 @@
+{
+  "eval_id": 1,
+  "eval_name": "full-deploy-workflow",
+  "prompt": "deploy this app with stackcube",
+  "assertions": []
+}
